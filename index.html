@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <link rel="stylesheet" href="menu.css">
+  </head>
+  <body>
+    <header>
+
+      <div class="menu">
+      		<div class="logo">
+            <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+          </div>
+          
+          <input type="checkbox" id="menu-toggle" />
+          
+      		
+          <div class="items">
+            <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
+            <a href="articles.html">Статьи</a>
+          </div>
+
+          <div class = "search-auth">
+              <form id="search" action="index.html" method="post">
+                  <input type="text" name="search" value="" placeholder="Название новости">
+                  <button type="submit" name="searchSubmit"> Поиск </button>
+              </form>
+
+              <a href="signIn.html">Регистрация</a>
+          </div>
+      	</div>
+
+    </header>
+  </body>
+</html>
