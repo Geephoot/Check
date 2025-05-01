@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title></title>
+  </head>
+  <body>
+    <header>
+
+      <div class="menu">
+      		<div class="logo">
+            <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
+            
+          </div>
+          
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+      		
+          <div class="items">
+            <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
+            <a href="articles.html">Статьи</a>
+          </div>
+
+          <div class = "search-auth">
+              <form id="search" action="index.html" method="post">
+                  <input type="text" name="search" value="" placeholder="Название новости">
+                  <button type="submit" name="searchSubmit"> Поиск </button>
+              </form>
+
+              <a href="signIn.html">Регистрация</a>
+          </div>
+      	</div>      
+    </header>
+    <main>
+      <div class ="articles">
+        <h3>Статьи</h3>
+        <div class="content">
+          <div class="filter">
+            <form class="" action="index.html" method="post">
+              <input type="text" name="search" value="" placeholder="Название статьи"> <button type="submit" name="searchSubmit"> Поиск </button>
+            </form>
+            <ol>
+            <li>
+              <input class="generalType-toggle" type="checkbox" value="Естественные науки"> Естественные науки
+              <ol>
+                <li><input type="checkbox" value="Биология"> Биология</li>
+                <li><input type="checkbox" value="Химия"> Химия</li>
+                <li><input type="checkbox" value="Физика"> Физика</li>
+                <li><input type="checkbox" value="Науки о Земле"> Науки о Земле</li>
+              </ol>
+            </li>
+            <li>
+              <input class="generalType-toggle" type="checkbox" value="Технические и прикладные науки"> Технические и прикладные науки
+              <ol>
+                <li><input type="checkbox" value="Инженерия"> Инженерия</li>
+                <li><input type="checkbox" value="ИТ и программирование"> ИТ и программирование</li>
+                <li><input type="checkbox" value="Архитектура и строительство"> Архитектура и строительство</li>
+                <li><input type="checkbox" value="Нанотехнологии"> Нанотехнологии</li>
+              </ol>
+            </li>
+            <li>
+              <input class="generalType-toggle" type="checkbox" value="Медицина и здравоохранение"> Медицина и здравоохранение
+              <ol>
+                <li><input type="checkbox" value="Клиническая медицина"> Клиническая медицина</li>
+                <li><input type="checkbox" value="Общественное здравоохранение"> Общественное здравоохранение</li>
+                <li><input type="checkbox" value="Фармакология"> Фармакология</li>
+                <li><input type="checkbox" value="Психология"> Психология</li>
+              </ol>
+            </li>
+            <li>
+              <input class="generalType-toggle" type="checkbox" value="Общественные науки"> Общественные науки
+              <ol>
+                <li><input type="checkbox" value="Экономика"> Экономика</li>
+                <li><input type="checkbox" value="Социология"> Социология</li>
+                <li><input type="checkbox" value="Политология"> Политология</li>
+                <li><input type="checkbox" value="Право"> Право</li>
+                <li><input type="checkbox" value="Образование"> Образование</li>
+              </ol>
+            </li>
+            <li>
+              <input class="generalType-toggle" type="checkbox" value="Гуманитарные науки"> Гуманитарные науки
+              <ol>
+                <li><input type="checkbox" value="Литература"> Литература</li>
+                <li><input type="checkbox" value="История"> История</li>
+                <li><input type="checkbox" value="Философия"> Философия</li>
+                <li><input type="checkbox" value="Культурология"> Культурология</li>
+              </ol>
+            </li>
+            <li>
+              <input class="generalType-toggle" type="checkbox" value="Искусство и творчество"> Искусство и творчество
+              <ol>
+                <li><input type="checkbox" value="Музыка"> Музыка</li>
+                <li><input type="checkbox" value="Живопись"> Живопись</li>
+                <li><input type="checkbox" value="Театр"> Театр</li>
+                <li><input type="checkbox" value="Дизайн"> Дизайн</li>
+              </ol>
+            </li>
+          </ol></div>
+          <div class="table_box">
+            <table>
+              <thead>
+                <tr>
+                  <td>Номер</td>
+                  <td>Название</td>
+                  <td>Ссылка</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001</td>
+                  <td>Казахстан и современные техналогии</td>
+                  <td> <a href="files/1.pdf" download>скачать</a></td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Долговременное обучение в Казахстане</td>
+                  <td> <a href="files/2.pdf" download>скачать</a> </td>
+                </tr>
+                <tr>
+                  <td>003</td>
+                  <td>Вакцина от рака</td>
+                  <td> <a href="files/1.pdf" download>скачать</a> </td>
+                </tr>
+                <tr>
+                  <td>003</td>
+                  <td>Вакцина от рака</td>
+                  <td> <a href="files/1.pdf" download>скачать</a> </td>
+                </tr>
+                <tr>
+                  <td>003</td>
+                  <td>Вакцина от рака</td>
+                  <td> <a href="files/1.pdf" download>скачать</a> </td>
+                </tr>
+              </tbody>
+    
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -2,9 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню</title>
-    <link rel="stylesheet" href="menu.css">
+    <title></title>
+    <style>
+      
+    </style>
   </head>
   <body>
     <header>
@@ -12,11 +15,15 @@
       <div class="menu">
       		<div class="logo">
             <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            
           </div>
           
           <input type="checkbox" id="menu-toggle" />
-          
+          <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
       		
           <div class="items">
             <a href="index.html">Главная</a>
@@ -32,8 +39,138 @@
 
               <a href="signIn.html">Регистрация</a>
           </div>
-      	</div>
-
+      	</div>      
     </header>
+    <main>
+        <div class="mainNews">
+          <div class="imageNews">
+            <table>
+              <tr>
+                <td class="large" rowspan="2"> <a href="#"> <img loading="lazy". src="images/1.webp" alt="1"><h3>В Великобритании начались испытания РНК-вакцины от рака лёгких</h3></a> </td>
+                <td class="small" > <a href="#">  <img loading="lazy". src="images/2.webp" alt="1"> <h3>Показала игровые чипы RTX 50 и и технологии ИИ для обучения роботов</h3> </a> </td>
+                <td class="small" > <a href="#"><img loading="lazy". src="images/3.webp" alt="1"> <h3>Застрявшие на станции астронавты смогут вернуться домой</h3></a> </td>
+              </tr>
+              <tr>
+                <td class="small" > <a href="#"><img loading="lazy". src="images/4.webp" alt="1"> <h3>Нобелевскую премию по медицине и физиологии получили ученые, открывшие микроРНК</h3> </a> </td>
+                <td class="small" > <a href="#"><img loading="lazy". src="images/5.webp" alt="1"> <h3>Астронавты Бутч Уилмор и Суни Уильямс вернулись на Землю после девяти месяцев в космосе</h3> </a> </td>
+              </tr>
+            </table>
+          </div>
+          <div class="lists">
+
+            <div class="recent">
+              <div class="tabs">
+                <button class="tab" data-title="Лента">Лента</button>
+                <button class="tab" data-title="Астрономия">Астрономия</button>
+                <button class="tab" data-title="Космонавтика">Космонавтика</button>
+                <button class="tab" data-title="Физика">Физика</button>
+                <button class="tab" data-title="Химия">Химия</button>
+                <button class="tab" data-title="Hi-Tech">Hi-Tech</button>
+                <button class="tab" data-title="Оружие и техника">Оружие и техника</button>
+                <button class="tab" data-title="Медицина">Медицина</button>
+                <button class="tab" data-title="Биология">Биология</button>
+                <button class="tab" data-title="Антропология">Антропология</button>
+              </div>
+              <h1 id="page-title" class="caption">Лента новостей</h3>
+              
+              <div class="news">
+                  <div class="img_box"><img src="images/1_1.webp" alt=""></div>
+                  <div class="like-container" data-count="0">
+                    <svg class="like-icon" viewBox="0 0 24 24">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                      2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 
+                      3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 
+                      3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span class="count">3</span>
+                  </div>
+                  <h2><a href="news1.html">Фитопланктоны, обступившие побережье Сахалина, сняли из космоса</a></h2>
+                  <p class="date">Опубликовано: 25 марта 2025</p>
+                  <p>Краткое описание первой новости. Подробнее...</p>
+              </div>
+              <div class="news">
+                  <div class="img_box"><img src="images/1_2.webp" alt=""></div>
+                  <div class="like-container" data-count="0">
+                    <svg class="like-icon" viewBox="0 0 24 24">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                      2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 
+                      3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 
+                      3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span class="count">3</span>
+                  </div>
+                  <h2><a href="news2.html">Астрономы впервые надежно зафиксировали одинокую черную дыру</a></h2>
+                  <p class="date">Опубликовано: 24 марта 2025</p>
+                  <p>Краткое описание второй новости. Подробнее...</p>
+              </div>
+              <div class="news">
+                  <div class="img_box"><img src="images/1_3.webp" alt=""></div>
+                  <div class="like-container" data-count="0">
+                    <svg class="like-icon" viewBox="0 0 24 24">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                      2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 
+                      3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 
+                      3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span class="count">0</span>
+                  </div>
+                  <h2><a href="news3.html">
+                    Космонавт из Назарово Кирилл Песков показал возвращение «Союз МС-26» на Землю с борта МКС</a></h2>
+                    
+                    <p class="date">Опубликовано: 23 марта 2025</p>
+                  <p>Краткое описание третьей новости. Подробнее...</p>
+              </div>
+            </div>
+            <div class="rec">
+              <div class="list">
+                <h3 class="caption">Популярное сегодня</h3>
+              <ul>
+                <li> <a href="404.html"> текст</a> </li>
+                <li> <a href="404.html"> текст</a> </li>
+                <li> <a href="404.html"> текст</a> </li>
+                <li> <a href="404.html"> текст</a> </li>
+                <li> <a href="404.html"> текст</a> </li>
+              </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="lists">
+          <div class="list">
+            <h4>Информация</h4>
+            <ul>
+              <li><a href="aboutUs.html">О Проекте</a> </li>
+              <li><a href="404.html">Политика конфидициальности</a> </li>
+              <li><a href="404.html">Правила использования</a></li>
+              <li><a href="404.html">Реклама</a> </li>
+              <li><a href="404.html">Обратная связь</a> </li>
+            </ul>
+          </div>
+          <div class="list">
+            <h4>Социальные сети</h4>
+            <a href="aboutUs.html"> <img src="images\icons\twitter.svg" alt="Twitter"> </a>
+            <a href="404.html"> <img src="images\icons\Youtube.svg" alt="Youtube"> </a>
+            <a href="404.html"> <img src="images\icons\Instagram.svg" alt="Instagram"> </a>
+            <a href="404.html"> <img src="images\icons\Vk.svg" alt="Вконтакте"> </a>
+          </div>
+          <div class="list">
+            <h4>Контакты</h4>
+            <ul>
+              <li> <a href="tel:+77479360683">8-747-936-06-83</a> </li>
+              <li> <a href="mailto:APO3010@ku.edu.kz">APO3010@ku.edu.kz</a> </li>
+            </ul>
+            <br>
+          </div>
+        </div>
+        <div class="copy">
+          &copy; 2025 Nova | Все права защищены. 
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
   </body>
 </html>
