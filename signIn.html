@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+
+        <div class="menu">
+                <div class="logo">
+              <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
+              
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+                
+            <div class="items">
+              <a href="index.html">Главная</a>
+              <a href="news.html">Новости</a>
+              <a href="articles.html">Статьи</a>
+            </div>
+  
+            <div class = "search-auth">
+                <form id="search" action="index.html" method="post">
+                    <input type="text" name="search" value="" placeholder="Название новости">
+                    <button type="submit" name="searchSubmit"> Поиск </button>
+                </form>
+  
+                <a href="signIn.html">Регистрация</a>
+            </div>
+            </div>      
+    </header>
+    <div class="signIn">
+        <div class="container">
+        <h2>Регистрация</h2>
+        <form id="signInForm">
+            <div id="errorMessage"></div>
+            <input type="text" id="username" name="username" placeholder="Имя" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="password" name="password" placeholder="Пароль" required>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Подтвердите пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="login-link">
+            Уже есть аккаунт? <a href="#">Войти</a>
+        </div>
+    </div></div>
+    <script>
+        
+        document.getElementById('signInForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                let errorMessage = '';
+                const name = document.getElementById('username').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const password = document.getElementById('password').value.trim();
+                const confirmPassword = document.getElementById('confirm_password').value.trim();
+
+                
+
+                if (!name || !email || !password || !confirmPassword) {
+                    errorMessage = 'Пожалуйста, заполните все поля.';
+                } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                    errorMessage = 'Введите корректный email.';
+                } else if (password.length < 6) {
+                    errorMessage = 'Пароль должен быть не менее 6 символов.';
+                } else if (password !== confirmPassword) {
+                    errorMessage = 'Пароли не совпадают.';
+                }else if (name.length > 20) {
+                    errorMessage = name + " слишком длинное"
+                }
+
+                if (errorMessage) {
+                    document.getElementById('errorMessage').innerHTML = errorMessage;
+                } else {
+                    document.getElementById('errorMessage').innerHTML = '';
+                    alert('Форма отправлена успешно!');
+                    // Здесь можно отправить данные на сервер
+                }
+            });
+    </script>
+    
+
+    <footer>
+        <div class="footer">
+          <div class="lists">
+            <div class="list">
+              <h4>Информация</h4>
+              <ul>
+                <li><a href="aboutUs.html">О Проекте</a> </li>
+                <li><a href="404.html">Политика конфидициальности</a> </li>
+                <li><a href="404.html">Правила использования</a></li>
+                <li><a href="404.html">Реклама</a> </li>
+                <li><a href="404.html">Обратная связь</a> </li>
+              </ul>
+            </div>
+            <div class="list">
+              <h4>Социальные сети</h4>
+              <a href="404.html"> <img src="images\icons\twitter.svg" alt="Twitter"> </a>
+              <a href="404.html"> <img src="images\icons\Youtube.svg" alt="Youtube"> </a>
+              <a href="404.html"> <img src="images\icons\Instagram.svg" alt="Instagram"> </a>
+              <a href="404.html"> <img src="images\icons\Vk.svg" alt="Вконтакте"> </a>
+            </div>
+            <div class="list">
+              <h4>Контакты</h4>
+              <ul>
+                <li> <a href="tel:+77479360683">8-747-936-06-83</a> </li>
+                <li> <a href="mailto:APO3010@ku.edu.kz">APO3010@ku.edu.kz</a> </li>
+              </ul>
+              <br>
+            </div>
+          </div>
+          <div class="copy">
+            &copy; 2025 Nova | Все права защищены. 
+          </div>
+        </div>
+    </footer>
+</body>
+</html>
