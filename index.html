@@ -46,13 +46,13 @@
           <div class="imageNews">
             <table>
               <tr>
-                <td class="large" rowspan="2"> <a href="#"> <img src="images/1.webp" alt="1"><h3>В Великобритании начались испытания РНК-вакцины от рака лёгких</h3></a> </td>
-                <td class="small" > <a href="#">  <img src="images/2.webp" alt="1"> <h3>Показала игровые чипы RTX 50 и и технологии ИИ для обучения роботов</h3> </a> </td>
-                <td class="small" > <a href="#"><img src="images/3.webp" alt="1"> <h3>Застрявшие на станции астронавты смогут вернуться домой</h3></a> </td>
+                <td class="large" rowspan="2"> <a href="#"> <img loading="lazy". src="images/1.webp" alt="1"><h3>В Великобритании начались испытания РНК-вакцины от рака лёгких</h3></a> </td>
+                <td class="small" > <a href="#">  <img loading="lazy". src="images/2.webp" alt="1"> <h3>Показала игровые чипы RTX 50 и и технологии ИИ для обучения роботов</h3> </a> </td>
+                <td class="small" > <a href="#"><img loading="lazy". src="images/3.webp" alt="1"> <h3>Застрявшие на станции астронавты смогут вернуться домой</h3></a> </td>
               </tr>
               <tr>
-                <td class="small" > <a href="#"><img src="images/4.webp" alt="1"> <h3>Нобелевскую премию по медицине и физиологии получили ученые, открывшие микроРНК</h3> </a> </td>
-                <td class="small" > <a href="#"><img src="images/5.webp" alt="1"> <h3>Астронавты Бутч Уилмор и Суни Уильямс вернулись на Землю после девяти месяцев в космосе</h3> </a> </td>
+                <td class="small" > <a href="#"><img loading="lazy". src="images/4.webp" alt="1"> <h3>Нобелевскую премию по медицине и физиологии получили ученые, открывшие микроРНК</h3> </a> </td>
+                <td class="small" > <a href="#"><img loading="lazy". src="images/5.webp" alt="1"> <h3>Астронавты Бутч Уилмор и Суни Уильямс вернулись на Землю после девяти месяцев в космосе</h3> </a> </td>
               </tr>
             </table>
           </div>
@@ -72,23 +72,9 @@
                 <button class="tab" data-title="Антропология">Антропология</button>
               </div>
               <h1 id="page-title" class="caption">Лента новостей</h3>
-              <script>
-                const tabs = document.querySelectorAll('.tab');
-                const title = document.getElementById('page-title');
               
-                tabs.forEach(tab => {
-                  tab.addEventListener('click', () => {
-                    // Снять активный класс со всех вкладок
-                    tabs.forEach(t => t.classList.remove('active'));
-                    // Добавить активной вкладке
-                    tab.classList.add('active');
-                    // Обновить заголовок
-                    title.textContent = tab.getAttribute('data-title');
-                  });
-                });
-              </script>
               <div class="news">
-                  <div class="img_box"><img src="images/1_1.jpg" alt=""></div>
+                  <div class="img_box"><img src="images/1_1.webp" alt=""></div>
                   <div class="like-container" data-count="0">
                     <svg class="like-icon" viewBox="0 0 24 24">
                       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
@@ -103,7 +89,7 @@
                   <p>Краткое описание первой новости. Подробнее...</p>
               </div>
               <div class="news">
-                  <div class="img_box"><img src="images/1_2.jpg" alt=""></div>
+                  <div class="img_box"><img src="images/1_2.webp" alt=""></div>
                   <div class="like-container" data-count="0">
                     <svg class="like-icon" viewBox="0 0 24 24">
                       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
@@ -118,7 +104,7 @@
                   <p>Краткое описание второй новости. Подробнее...</p>
               </div>
               <div class="news">
-                  <div class="img_box"><img src="images/1_3.jpg" alt=""></div>
+                  <div class="img_box"><img src="images/1_3.webp" alt=""></div>
                   <div class="like-container" data-count="0">
                     <svg class="like-icon" viewBox="0 0 24 24">
                       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
@@ -134,17 +120,6 @@
                     <p class="date">Опубликовано: 23 марта 2025</p>
                   <p>Краткое описание третьей новости. Подробнее...</p>
               </div>
-              <script>
-                document.querySelectorAll('.like-container').forEach(container => {
-                  container.addEventListener('click', () => {
-                    const liked = container.classList.toggle('liked');
-                    const countSpan = container.querySelector('.count');
-                    let count = parseInt(countSpan.textContent);
-                    count += liked ? 1 : -1;
-                    countSpan.textContent = count;
-                  });
-                });
-              </script>
             </div>
             <div class="rec">
               <div class="list">
@@ -196,5 +171,6 @@
         </div>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

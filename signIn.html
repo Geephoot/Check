@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
     <link rel="stylesheet" href="main.css">
-    <style>
-        
-    </style>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none';">
 </head>
 <body>
     <header>
@@ -57,6 +55,17 @@
         </div>
     </div></div>
     <script>
+        function escapeHTML(str) {
+            return str.replace(/[&<>"']/g, function (char) {
+                return ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#39;'
+                })[char];
+            });
+        }
         
         document.getElementById('signInForm').addEventListener('submit', function(event) {
                 event.preventDefault();
@@ -82,9 +91,9 @@
                 }
 
                 if (errorMessage) {
-                    document.getElementById('errorMessage').innerHTML = errorMessage;
+                    document.getElementById('errorMessage').textContent = escapeHTML(errorMessage);
                 } else {
-                    document.getElementById('errorMessage').innerHTML = '';
+                    document.getElementById('errorMessage').textContent = '';
                     alert('Форма отправлена успешно!');
                     // Здесь можно отправить данные на сервер
                 }
