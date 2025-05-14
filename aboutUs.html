@@ -3,25 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="aboutUs.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="footer.css">
     <title></title>
-    <style>
-    </style>
   </head>
-  <body>
-    <header>
-
+ <body>
+  <header>
       <div class="menu">
       		<div class="logo">
             <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
-            
+            <div class="theme-switch">
+              <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+              </label>
+            </div>
+
           </div>
           
           <input type="checkbox" id="menu-toggle" />
           <label for="menu-toggle" class="menu-icon">
             <span></span>
-            <span></span>
-            <span></span>
+            
           </label>
       		
           <div class="items">
@@ -38,77 +42,82 @@
 
               <a href="signIn.html">Регистрация</a>
           </div>
-      	</div>      
+      	</div>  
     </header>
-    <div class="aboutUs_box">
-      <h1>Nova</h1>
-      <p class="top_text">Ваш постоянный источник информации о последних достижениях в области космических исследований и научных открытий</p>
-        <div class="video_wrapper">
-          <video width="100%" autoplay muted loop>
-              <source src="videos/videoplayback.mp4" type="video/mp4">
-          </video>
-          <div class="caption">
-            Exploring the Universe
-          </div>
-        </div>
-        <div class="content">
-            <h2>Who We Are</h2>
-            <p>We are a dedicated team of journalists, scientists, and space enthusiasts who bring you the latest news about space exploration, scientific breakthroughs, and astronomical discoveries.</p>
-            <h2>Our Mission</h2>
-            <p>Our goal is to educate, inspire, and inform the world about the wonders of the cosmos and the latest advancements in science and technology.</p>
-        </div>
-        <h2>Meet Our Team</h2>
-        <div class="team">
-            <div class="team-member">
-                <a href="images/1.jpg"><img src="images/1.jpg" alt="Team Member 1"></a>
-                <h3>Dr. Sarah Johnson</h3>
-                <p>Astrophysicist & Chief Editor</p>
-            </div>
-            <div class="team-member">
-                <a href="images/2.jpg"><img src="images/2.jpg" alt="Team Member 2"></a>
-                <h3>Mark Spencer</h3>
-                <p>Science Journalist</p>
-            </div>
-            <div class="team-member">
-                <a href="images/3.jpg"><img src="images/3.jpg" alt="Team Member 3"></a>
-                <h3>Lisa Roberts</h3>
-                <p>Space Correspondent</p>
-            </div>
-        </div>
+  <div class="aboutUs_box">
+    <h1>Nova</h1>
+    <p class="top_text">Ваш постоянный источник информации о последних достижениях в области космических исследований и научных открытий</p>
+
+    <div class="video_wrapper">
+      <video width="100%" autoplay muted loop>
+        <source src="videos/videoplayback.mp4" type="video/mp4">
+      </video>
+      <div class="caption">
+        
+      </div>
     </div>
-    <footer>
-      <div class="footer">
-        <div class="lists">
-          <div class="list">
-            <h4>Информация</h4>
-            <ul>
-              <li><a href="aboutUs.html">О Проекте</a> </li>
-              <li><a href="404.html">Политика конфидициальности</a> </li>
-              <li><a href="404.html">Правила использования</a></li>
-              <li><a href="404.html">Реклама</a> </li>
-              <li><a href="404.html">Обратная связь</a> </li>
-            </ul>
-          </div>
-          <div class="list">
-            <h4>Социальные сети</h4>
-            <a href="404.html"> <img src="images\icons\twitter.svg" alt="Twitter"> </a>
-            <a href="404.html"> <img src="images\icons\Youtube.svg" alt="Youtube"> </a>
-            <a href="404.html"> <img src="images\icons\Instagram.svg" alt="Instagram"> </a>
-            <a href="404.html"> <img src="images\icons\Vk.svg" alt="Вконтакте"> </a>
-          </div>
-          <div class="list">
-            <h4>Контакты</h4>
-            <ul>
-              <li> <a href="tel:+77479360683">8-747-936-06-83</a> </li>
-              <li> <a href="mailto:APO3010@ku.edu.kz">APO3010@ku.edu.kz</a> </li>
-            </ul>
-            <br>
-          </div>
+
+    <div class="content">
+      <h2>Кто мы</h2>
+      <p>Мы — команда журналистов, учёных и энтузиастов космоса, которая предоставляет вам свежие новости о космических исследованиях, научных прорывах и астрономических открытиях.</p>
+
+      <h2>Наша миссия</h2>
+      <p>Наша цель — просвещать, вдохновлять и информировать мир о чудесах космоса и последних достижениях в области науки и технологий.</p>
+    </div>
+
+    <h2>Наша командой</h2>
+    <div class="team">
+      <div class="team-member">
+        <a href="images/1.jpg"><img src="images/1.jpg" alt="Участник команды 1"></a>
+        <h3>Доктор Сара Джонсон</h3>
+        <p>Астрофизик и главный редактор</p>
+      </div>
+      <div class="team-member">
+        <a href="images/2.jpg"><img src="images/2.jpg" alt="Участник команды 2"></a>
+        <h3>Марк Спенсер</h3>
+        <p>Научный журналист</p>
+      </div>
+      <div class="team-member">
+        <a href="images/3.jpg"><img src="images/3.jpg" alt="Участник команды 3"></a>
+        <h3>Лиза Робертс</h3>
+        <p>Космический корреспондент</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <div class="lists">
+        <div class="list">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="aboutUs.html">О Проекте</a> </li>
+            <li><a href="404.html">Политика конфидициальности</a> </li>
+            <li><a href="404.html">Правила использования</a></li>
+            <li><a href="404.html">Реклама</a> </li>
+            <li><a href="404.html">Обратная связь</a> </li>
+          </ul>
         </div>
-        <div class="copy">
-          &copy; 2025 Nova | Все права защищены. 
+        <div class="list">
+          <h4>Социальные сети</h4>
+          <a href="404.html"> <img src="images\icons\twitter.svg" alt="Twitter"> </a>
+          <a href="404.html"> <img src="images\icons\Youtube.svg" alt="Youtube"> </a>
+          <a href="404.html"> <img src="images\icons\Instagram.svg" alt="Instagram"> </a>
+          <a href="404.html"> <img src="images\icons\Vk.svg" alt="Вконтакте"> </a>
+        </div>
+        <div class="list">
+          <h4>Контакты</h4>
+          <ul>
+            <li> <a href="tel:+77479360683">8-747-936-06-83</a> </li>
+            <li> <a href="mailto:APO3010@ku.edu.kz">APO3010@ku.edu.kz</a> </li>
+          </ul>
+          <br>
         </div>
       </div>
-    </footer>
-  </body>
+      <div class="copy">
+        &copy; 2025 Nova | Все права защищены. 
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

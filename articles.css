@@ -1,0 +1,189 @@
+:root {
+    --color-bg: #1c2431;                      /* Тёмный сине-серый фон */
+    --color-bg-light: #2e3b4f;               /* Более светлый фон блоков */
+    --color-table-bg: #2e3b4f;               /* Фон таблицы */
+    --color-header-bg: #3a4c66;              /* Тускло-синий фон заголовков */
+    --color-header-text: #e0e6ed;            /* Светлый текст */
+    --color-border: #4d5c70;                 /* Серо-синяя граница */
+    --color-link: #8fa7c5;                   /* Светлый стальной синий (ссылки) */
+    --color-button-bg: #3a4c66;              /* Тускло-синяя кнопка */
+    --color-button-hover: #4d6a8c;           /* Ховер — чуть светлее */
+    --color-button-text: #ffffff;            /* Белый текст кнопки */
+    --box-shadow-light: 0px 0px 8px rgba(30, 50, 70, 0.4); /* Глубокая синяя тень */
+    --color-text: #e0e6ed;                   /* Светло-серый основной текст */
+    --color-input-bg: #2e3b4f;               /* Фон инпута */
+    --color-input-text: #e0e6ed;             /* Текст инпута */
+    --color-input-placeholder: #9aa7b8;      /* Плейсхолдер — серо-синий */
+}
+
+.dark-theme {
+  --color-bg: #f3f6fa;                    
+  --color-bg-light: #dedde6;               
+  --color-table-bg: #ffffff;             
+  --color-header-bg: #5c728f;             
+  --color-header-text: #ffffff;          
+  --color-border: #cdd6e0;             
+  --color-link: #3a4c66;                
+  --color-button-bg: #5c728f;          
+  --color-button-hover: #4c5f78;        
+  --color-button-text: #ffffff;         
+  --box-shadow-light: 0px 0px 8px rgba(80, 100, 120, 0.2);
+  --color-text: #1f2a38;               
+  --color-input-bg: #e5ecf2;             
+  --color-input-text: #1f2a38;           
+  --color-input-placeholder: #7c8ea3;    
+  --color-hover-border: #3a4c66;         
+  --color-shadow-hover: rgba(90, 110, 130, 0.15);
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text)
+}
+
+main{
+  padding-top: 40px;
+}
+.articles {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.articles .content {
+  display: flex;
+  width: 100%;
+}
+
+.articles .filter {
+  white-space: nowrap;
+  width: 500px;
+}
+
+.articles .table_box {
+  width: 100%;
+}
+
+.articles table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px;
+  background-color: var(--color-table-bg);
+}
+
+.articles table,
+th,
+td {
+  border: 1px solid var(--color-border);
+}
+
+.articles th,
+td {
+  padding: 10px;
+  text-align: left;
+  height: 20px;
+}
+
+.articles thead {
+  background-color: var(--color-header-bg);
+  color: var(--color-header-text);
+}
+
+.articles table tr {
+  height: 20px;
+}
+
+.articles table a {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+.articles table a:hover {
+  text-decoration: underline;
+}
+
+.articles form {
+  display: flex;
+  margin-right: 10px;
+}
+
+.articles input[type="text"] {
+  padding: 10px 10px 10px;
+  font-size: 16px;
+  
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid var(--color-border);
+}
+.articles input::placeholder {
+  color: var(--color-input-placeholder);
+  font-size: 15px;
+}
+
+.articles button {
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+
+.articles button:hover {
+  background-color: var(--color-button-hover);
+}
+
+.articles ol {
+  list-style: none;
+  padding-left: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  background: var(--color-bg-light);
+  border-radius: 5px;
+}
+
+.articles ol ol {
+  display: none;
+  padding-left: 30px;
+}
+
+.articles .generalType-toggle:checked ~ ol {
+  display: list-item;
+}
+
+@media screen and (max-width: 1000px) {
+  .articles .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .articles .filter {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .articles .table_box {
+    width: 100%;
+  }
+  .articles form {
+    margin-right: 0px;
+  }
+  .articles ol{
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+
+  .articles {
+    font-size: 15px;
+  }
+}

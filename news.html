@@ -3,23 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title></title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Статьи</title>
   </head>
   <body>
     <header>
-
       <div class="menu">
       		<div class="logo">
             <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
-            
+            <div class="theme-switch">
+              <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+              </label>
+            </div>
+
           </div>
           
           <input type="checkbox" id="menu-toggle" />
           <label for="menu-toggle" class="menu-icon">
             <span></span>
-            <span></span>
-            <span></span>
+            
           </label>
       		
           <div class="items">
@@ -36,81 +42,107 @@
 
               <a href="signIn.html">Регистрация</a>
           </div>
-      	</div>      
+      	</div>  
     </header>
     <main>
       <div class ="news_box">
         <h3>Новости</h3>
 
         <div class="search">
-            <form class="" action="index.html" method="post">
-              <input type="text" name="search" value="" placeholder="Название новости"> <button type="submit" name="searchSubmit"> Поиск </button>
+            <form id="search-form" class="" action="#" method="get">
+              <input type="text" name="search" id="search-input" value="" placeholder="Название новости"> <button type="submit" name="searchSubmit"> Поиск </button>
               <br> <br>
             </form>
         </div>
-        <div class="content">
-          <div>
-            <div class="list">
+        <div class="list">
               <div class="recent">
                 <h3 class="caption">Лента новостей</h3>
-                <div class="news">
-                    <div class="img_box"><img src="images/1_1.webp" alt=""></div>
-                    <h2><a href="news1.html">Фитопланктоны, обступившие побережье Сахалина, сняли из космоса</a></h2>
-                    <p class="date">Опубликовано: 25 марта 2025</p>
-                    <p>Краткое описание первой новости. Подробнее...</p>
+                <div class="news" data-tab="Астрономия">
+                  <div class="img_box"><img src="images/news1.jpg" alt="Карта воды на Луне"></div>
+                  <h2><a href="news1.html">NASA публикует карту воды на Луне</a></h2>
+                  <p class="date">20 марта 2025</p>
+                  <p>Миссия Artemis предоставила ценные данные о залежах водяного льда.</p>
                 </div>
-                <div class="news">
-                    <div class="img_box"><img src="images/1_2.webp" alt=""></div>
-                    <h2><a href="news2.html">Астрономы впервые надежно зафиксировали одинокую черную дыру</a></h2>
-                    <p class="date">Опубликовано: 24 марта 2025</p>
-                    <p>Краткое описание второй новости. Подробнее...</p>
+
+                <div class="news" data-tab="Астрономия">
+                  <div class="img_box"><img src="images/news2.jpg" alt="Черная дыра"></div>
+                  <h2><a href="news2.html">Одинокая черная дыра впервые зафиксирована</a></h2>
+                  <p class="date">24 марта 2025</p>
+                  <p>Астрономы нашли блуждающую черную дыру без звезды-компаньона.</p>
                 </div>
-                <div class="news">
-                    <div class="img_box"><img src="images/1_3.webp" alt=""></div>
-                    <h2><a href="news3.html">
-                      Космонавт из Назарово Кирилл Песков показал возвращение «Союз МС-26» на Землю с борта МКС</a></h2>
-                    <p class="date">Опубликовано: 23 марта 2025</p>
-                    <p>Краткое описание третьей новости. Подробнее...</p>
+
+                <div class="news" data-tab="Космонавтика">
+                  <div class="img_box"><img src="images/news3.jpg" alt="Возвращение Союз МС-26"></div>
+                  <h2><a href="news3.html">Песков показал возвращение «Союз МС-26»</a></h2>
+                  <p class="date">23 марта 2025</p>
+                  <p>Редкие кадры посадки с борта МКС.</p>
+                </div>
+
+                <div class="news" data-tab="Техника">
+                  <div class="img_box"><img src="images/news4.jpg" alt="Марсоход в Исландии"></div>
+                  <h2><a href="news4.html">Марсоход прошёл полевые испытания в Исландии</a></h2>
+                  <p class="date">22 марта 2025</p>
+                  <p>Новый бур тестируют в вулканических ландшафтах.</p>
+                </div>
+
+                <div class="news" data-tab="Медицина">
+                  <div class="img_box"><img src="images/news5.jpg" alt="Диагностика в космосе"></div>
+                  <h2><a href="news5.html">Диагностика в изоляции с помощью спутников</a></h2>
+                  <p class="date">21 марта 2025</p>
+                  <p>Новые методы позволяют следить за здоровьем космонавтов в реальном времени.</p>
+                </div>
+
+                <div class="news" data-tab="Экология">
+                  <div class="img_box"><img src="images/news6.jpg" alt="Фитопланктон у Сахалина"></div>
+                  <h2><a href="news6.html">Фитопланктоны у Сахалина замечены из космоса</a></h2>
+                  <p class="date">25 марта 2025</p>
+                  <p>Спутники зафиксировали массовое цветение в водах Охотского моря.</p>
+                </div>
+
+                <div class="news" data-tab="Астрономия">
+                  <div class="img_box"><img src="images/news7.jpg" alt="Солнечная буря"></div>
+                  <h2><a href="news7.html">Ожидается мощная солнечная буря</a></h2>
+                  <p class="date">26 марта 2025</p>
+                  <p>Ученые предупреждают о возможных сбоях связи и навигации.</p>
+                </div>
+
+                <div class="news" data-tab="Космонавтика">
+                  <div class="img_box"><img src="images/news8.jpg" alt="Ровер на Луне"></div>
+                  <h2><a href="news8.html">Европейский ровер начал исследование лунной пыли</a></h2>
+                  <p class="date">26 марта 2025</p>
+                  <p>Луноход изучает электростатические свойства реголита.</p>
+                </div>
+
+                <div class="news" data-tab="Астрономия">
+                  <div class="img_box"><img src="images/news9.jpg" alt="Космический телескоп"></div>
+                  <h2><a href="news9.html">Новый космический телескоп обнаружил 12 экзопланет</a></h2>
+                  <p class="date">27 марта 2025</p>
+                  <p>Некоторые планеты потенциально пригодны для жизни.</p>
                 </div>
               </div>
             </div>
-          </div>           
-        </div>
       </div>
+      <script>
+      const searchForm = document.getElementById('search-form');
+      const searchInput = document.getElementById('search-input');
+      const newsItems = document.querySelectorAll('.news');
+
+      searchForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const query = searchInput.value.trim().toLowerCase();
+
+        newsItems.forEach(item => {
+          const title = item.querySelector('h2').textContent.toLowerCase();
+          if (title.includes(query)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+      </script>
+
     </main>
-    <footer>
-      <div class="footer">
-        <div class="lists">
-          <div class="list">
-            <h4>Информация</h4>
-            <ul>
-              <li><a href="aboutUs.html">О Проекте</a> </li>
-              <li><a href="404.html">Политика конфидициальности</a> </li>
-              <li><a href="404.html">Правила использования</a></li>
-              <li><a href="404.html">Реклама</a> </li>
-              <li><a href="404.html">Обратная связь</a> </li>
-            </ul>
-          </div>
-          <div class="list">
-            <h4>Социальные сети</h4>
-            <a href="404.html"> <img src="images\icons\twitter.svg" alt="Twitter"> </a>
-            <a href="404.html"> <img src="images\icons\Youtube.svg" alt="Youtube"> </a>
-            <a href="404.html"> <img src="images\icons\Instagram.svg" alt="Instagram"> </a>
-            <a href="404.html"> <img src="images\icons\Vk.svg" alt="Вконтакте"> </a>
-          </div>
-          <div class="list">
-            <h4>Контакты</h4>
-            <ul>
-              <li> <a href="tel:+77479360683">8-747-936-06-83</a> </li>
-              <li> <a href="mailto:APO3010@ku.edu.kz">APO3010@ku.edu.kz</a> </li>
-            </ul>
-            <br>
-          </div>
-        </div>
-        <div class="copy">
-          &copy; 2025 Nova | Все права защищены. 
-        </div>
-      </div>
-    </footer>
+    <script src="main.js"></script>
   </body>
 </html>

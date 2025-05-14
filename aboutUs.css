@@ -1,0 +1,135 @@
+:root {
+    --color-body-bg: #1c2431;                      /* Тёмный сине-серый фон страницы */
+    --color-content-bg: #2e3b4f;                   /* Глубокий синий фон основного контента */
+    --color-text: #e0e6ed;                         /* Светло-серый текст */
+    --color-heading: #cdd4df;                      /* Яркий заголовок */
+    --color-caption-bg: rgba(15, 25, 35, 0.7);     /* Тёмный полупрозрачный фон подписи */
+    --color-caption-text: #ffffff;                 /* Белый текст подписи */
+    --color-caption-shadow: rgba(201, 197, 223, 0.541); /* Глубокая тень для подписи */
+    --color-box-shadow: rgba(219, 210, 255, 0.432);     /* Глубокая синеватая тень */
+    --border-radius: 10px;                         /* Скругление элементов */
+  }
+  /*
+  :root {
+  --color-body-bg: #f3f6fa;                       
+  --color-content-bg: #ffffff;                     
+  --color-text: #1f2a38;                          
+  --color-heading: #3a4c66;                       
+  --color-caption-bg: rgba(90, 110, 130, 0.1);     
+  --color-caption-text: #1f2a38;                  
+  --color-caption-shadow: rgba(100, 120, 140, 0.1);
+  --color-box-shadow: rgba(80, 100, 120, 0.2);     
+  --border-radius: 10px;                           
+}
+
+  */
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-body-bg);
+    color: var(--color-text);
+  }
+  
+  .aboutUs_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .aboutUs_box .top_text {
+    text-align: center;
+    margin: 10px 15px;
+    max-width: 840px;
+  }
+  
+  .aboutUs_box .video_wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 840px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 7px var(--color-caption-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .aboutUs_box .video_wrapper video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .aboutUs_box .video_wrapper .caption {
+    background: var(--color-caption-bg);
+    color: var(--color-caption-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .aboutUs_box .content {
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: justify;
+    background: var(--color-content-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0px 4px var(--color-box-shadow);
+  }
+  
+  .aboutUs_box .content h2 {
+    color: var(--color-heading);
+    word-wrap: normal;
+  }
+  
+  .aboutUs_box .content p {
+    line-height: 1.6;
+  }
+  
+  .aboutUs_box .team {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  
+  .aboutUs_box .team-member {
+    background: var(--color-content-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0px 4px var(--color-box-shadow);
+    text-align: center;
+    width: 200px;
+  }
+  
+  .aboutUs_box .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .aboutUs_box .video_wrapper {
+      height: 200px;
+    }
+  }
+  

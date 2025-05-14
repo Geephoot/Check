@@ -3,23 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="articles.css">
+    <link rel="stylesheet" href="footer.css">
     <title></title>
   </head>
   <body>
     <header>
-
       <div class="menu">
       		<div class="logo">
             <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
-            
+            <div class="theme-switch">
+              <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+              </label>
+            </div>
+
           </div>
           
           <input type="checkbox" id="menu-toggle" />
           <label for="menu-toggle" class="menu-icon">
             <span></span>
-            <span></span>
-            <span></span>
+            
           </label>
       		
           <div class="items">
@@ -36,15 +42,15 @@
 
               <a href="signIn.html">Регистрация</a>
           </div>
-      	</div>      
+      	</div>  
     </header>
     <main>
       <div class ="articles">
         <h3>Статьи</h3>
         <div class="content">
           <div class="filter">
-            <form class="" action="index.html" method="post">
-              <input type="text" name="search" value="" placeholder="Название статьи"> <button type="submit" name="searchSubmit"> Поиск </button>
+            <form id="search-form" action="#" method="get">
+              <input id="search-input" type="text" name="search" value="" placeholder="Название статьи"> <button type="submit" name="searchSubmit"> Поиск </button>
             </form>
             <ol>
             <li>
@@ -115,35 +121,61 @@
               <tbody>
                 <tr>
                   <td>001</td>
-                  <td>Казахстан и современные техналогии</td>
-                  <td> <a href="files/1.pdf" download>скачать</a></td>
+                  <td>Казахстан и современные технологии</td>
+                  <td><a href="files/1.pdf" download>скачать</a></td>
                 </tr>
                 <tr>
                   <td>002</td>
                   <td>Долговременное обучение в Казахстане</td>
-                  <td> <a href="files/2.pdf" download>скачать</a> </td>
+                  <td><a href="files/2.pdf" download>скачать</a></td>
                 </tr>
                 <tr>
                   <td>003</td>
                   <td>Вакцина от рака</td>
-                  <td> <a href="files/1.pdf" download>скачать</a> </td>
+                  <td><a href="files/3.pdf" download>скачать</a></td>
                 </tr>
                 <tr>
-                  <td>003</td>
-                  <td>Вакцина от рака</td>
-                  <td> <a href="files/1.pdf" download>скачать</a> </td>
+                  <td>004</td>
+                  <td>Космическая медицина: здоровье на орбите</td>
+                  <td><a href="files/4.pdf" download>скачать</a></td>
                 </tr>
                 <tr>
-                  <td>003</td>
-                  <td>Вакцина от рака</td>
-                  <td> <a href="files/1.pdf" download>скачать</a> </td>
+                  <td>005</td>
+                  <td>Развитие спутниковой связи в Центральной Азии</td>
+                  <td><a href="files/5.pdf" download>скачать</a></td>
+                </tr>
+                <tr>
+                  <td>006</td>
+                  <td>Использование ИИ в астрономических исследованиях</td>
+                  <td><a href="files/6.pdf" download>скачать</a></td>
+                </tr>
+                <tr>
+                  <td>007</td>
+                  <td>Экологический мониторинг из космоса</td>
+                  <td><a href="files/7.pdf" download>скачать</a></td>
+                </tr>
+                <tr>
+                  <td>008</td>
+                  <td>Психология долгих космических миссий</td>
+                  <td><a href="files/8.pdf" download>скачать</a></td>
+                </tr>
+                <tr>
+                  <td>009</td>
+                  <td>История советской космонавтики</td>
+                  <td><a href="files/9.pdf" download>скачать</a></td>
+                </tr>
+                <tr>
+                  <td>010</td>
+                  <td>Будущее марсианских поселений</td>
+                  <td><a href="files/10.pdf" download>скачать</a></td>
                 </tr>
               </tbody>
-    
             </table>
           </div>
         </div>
       </div>
+      <script src="main.js"></script>
+
     </main>
   </body>
 </html>

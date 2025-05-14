@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="footer.css">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+
+
+  </head>
+  <body>
+    <header>
+
+      <div class="menu">
+      		<div class="logo">
+            <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
+            <div class="theme-switch">
+              <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+          </div>
+          
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            
+          </label>
+      		
+          <div class="items">
+            <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
+            <a href="articles.html">Статьи</a>
+          </div>
+
+          <div class = "search-auth">
+              <form id="search" action="index.html" method="post">
+                  <input type="text" name="search" value="" placeholder="Название новости">
+                  <button type="submit" name="searchSubmit"> Поиск </button>
+              </form>
+
+              <a href="signIn.html">Регистрация</a>
+          </div>
+      	</div>
+        <script>
+  const toggleButton = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Загрузка сохранённой темы
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-theme');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+
+    // Сохраняем выбор
+    if (body.classList.contains('dark-theme')) {
+      localStorage.setItem('theme', 'dark');
+      toggleButton.textContent = '☀️';
+    } else {
+      localStorage.setItem('theme', 'light');
+      toggleButton.textContent = '🌙';
+    }
+  });
+
+  // Установка иконки при загрузке
+  if (body.classList.contains('dark-theme')) {
+    toggleButton.textContent = '☀️';
+  }
+</script>      
+    </header>
+    <main>
+        <div class="mainNews">
+          <div class="imageNews">
+            <table>
+              <tr>
+                <td class="large" rowspan="2"> <a href="#"> <img src="images/1.webp" alt="1"><h3>В Великобритании начались испытания РНК-вакцины от рака лёгких</h3></a> </td>
+                <td class="small" > <a href="#">  <img src="images/2.webp" alt="1"> <h3>Показала игровые чипы RTX 50 и и технологии ИИ для обучения роботов</h3> </a> </td>
+                <td class="small" > <a href="#"><img src="images/3.webp" alt="1"> <h3>Застрявшие на станции астронавты смогут вернуться домой</h3></a> </td>
+              </tr>
+              <tr>
+                <td class="small" > <a href="#"><img src="images/4.webp" alt="1"> <h3>Нобелевскую премию по медицине и физиологии получили ученые, открывшие микроРНК</h3> </a> </td>
+                <td class="small" > <a href="#"><img src="images/5.webp" alt="1"> <h3>Астронавты Бутч Уилмор и Суни Уильямс вернулись на Землю после девяти месяцев в космосе</h3> </a> </td>
+              </tr>
+            </table>
+          </div>
+          <div class="video">
+
+            <div class="video-wrapper">
+            <video id="player"  width="100%">
+              <source src="video/mars.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+            </div>
+            <div class="video-text">
+              <h2>Новая эра в исследовании Марса</h2>
+              <p>
+                NASA успешно запустило новый марсоход, способный бурить на глубину до 10 метров.
+                В этом видео рассказывается о его ключевых возможностях и ближайших научных целях.
+              </p>
+              <div class="video-cover" onclick="startVideo()">
+                <button class="play-button">▶ Смотреть видео</button>
+              </div>
+            </div>
+          </div>
+          <div class="lists">
+
+            <div class="recent">
+              <div class="tabs">
+                <button class="tab" data-title="Лента">Лента</button>
+                <button class="tab" data-title="Астрономия">Астрономия</button>
+                <button class="tab" data-title="Космонавтика">Космонавтика</button>
+                <button class="tab" data-title="Техника">Техника</button>
+                <button class="tab" data-title="Медицина">Медицина</button>
+                <button class="tab" data-title="Экология">Экология</button>
+              </div>
+              <h1 id="page-title" class="caption">Лента новостей</h3>
+            <div class="news" data-tab="Астрономия">
+              <div class="img_box"><img src="images/news1.jpg" alt="Карта воды на Луне"></div>
+              <h2><a href="news1.html">NASA публикует карту воды на Луне</a></h2>
+              <p class="date">20 марта 2025</p>
+              <p>Миссия Artemis предоставила ценные данные о залежах водяного льда.</p>
+            </div>
+
+            <div class="news" data-tab="Астрономия">
+              <div class="img_box"><img src="images/news2.jpg" alt="Черная дыра"></div>
+              <h2><a href="news2.html">Одинокая черная дыра впервые зафиксирована</a></h2>
+              <p class="date">24 марта 2025</p>
+              <p>Астрономы нашли блуждающую черную дыру без звезды-компаньона.</p>
+            </div>
+
+            <div class="news" data-tab="Космонавтика">
+              <div class="img_box"><img src="images/news3.jpg" alt="Возвращение Союз МС-26"></div>
+              <h2><a href="news3.html">Песков показал возвращение «Союз МС-26»</a></h2>
+              <p class="date">23 марта 2025</p>
+              <p>Редкие кадры посадки с борта МКС.</p>
+            </div>
+
+            <div class="news" data-tab="Техника">
+              <div class="img_box"><img src="images/news4.jpg" alt="Марсоход в Исландии"></div>
+              <h2><a href="news4.html">Марсоход прошёл полевые испытания в Исландии</a></h2>
+              <p class="date">22 марта 2025</p>
+              <p>Новый бур тестируют в вулканических ландшафтах.</p>
+            </div>
+
+            <div class="news" data-tab="Медицина">
+              <div class="img_box"><img src="images/news5.jpg" alt="Диагностика в космосе"></div>
+              <h2><a href="news5.html">Диагностика в изоляции с помощью спутников</a></h2>
+              <p class="date">21 марта 2025</p>
+              <p>Новые методы позволяют следить за здоровьем космонавтов в реальном времени.</p>
+            </div>
+
+            <div class="news" data-tab="Экология">
+              <div class="img_box"><img src="images/news6.jpg" alt="Фитопланктон у Сахалина"></div>
+              <h2><a href="news6.html">Фитопланктоны у Сахалина замечены из космоса</a></h2>
+              <p class="date">25 марта 2025</p>
+              <p>Спутники зафиксировали массовое цветение в водах Охотского моря.</p>
+            </div>
+
+            <div class="news" data-tab="Астрономия">
+              <div class="img_box"><img src="images/news7.jpg" alt="Солнечная буря"></div>
+              <h2><a href="news7.html">Ожидается мощная солнечная буря</a></h2>
+              <p class="date">26 марта 2025</p>
+              <p>Ученые предупреждают о возможных сбоях связи и навигации.</p>
+            </div>
+
+            <div class="news" data-tab="Космонавтика">
+              <div class="img_box"><img src="images/news8.jpg" alt="Ровер на Луне"></div>
+              <h2><a href="news8.html">Европейский ровер начал исследование лунной пыли</a></h2>
+              <p class="date">26 марта 2025</p>
+              <p>Луноход изучает электростатические свойства реголита.</p>
+            </div>
+
+            <div class="news" data-tab="Астрономия">
+              <div class="img_box"><img src="images/news9.jpg" alt="Космический телескоп"></div>
+              <h2><a href="news9.html">Новый космический телескоп обнаружил 12 экзопланет</a></h2>
+              <p class="date">27 марта 2025</p>
+              <p>Некоторые планеты потенциально пригодны для жизни.</p>
+            </div>
+            </div>
+            <div class="rec">
+              <div class="list">
+                <h3 class="caption">Поcледние новости:</h3>
+              <ul>
+                <li> 15.05 <a href="404.html"> Ученые выяснили, сколько данных нужно для искусственного интеллекта</a> </li>
+                <li> 15.05 <a href="404.html"> В России наладят выпуск рассасывающихся имплантатов для челюстно-лицевой хирургии</a> </li>
+                <li> 15.05 <a href="404.html"> В Перми синтезировали новые обезболивающие вещества для анальгетиков</a> </li>
+                <li> 15.05 <a href="404.html"> Белорусские инженеры создали рельсовый беспилотник с рекордно низким сопротивлением</a> </li>
+                <li> 15.05 <a href="404.html"> Новый метод позволит контролировать качество нанокомпозитов на всех этапах</a> </li>
+              </ul>
+
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    </main>
+    <footer>
+    <div class="footer">
+      <div class="lists">
+        <div class="list">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="aboutUs.html">О Проекте</a> </li>
+            <li><a href="404.html">Политика конфидициальности</a> </li>
+            <li><a href="404.html">Правила использования</a></li>
+            <li><a href="404.html">Реклама</a> </li>
+            <li><a href="404.html">Обратная связь</a> </li>
+          </ul>
+        </div>
+        <div class="list">
+          <h4>Социальные сети</h4>
+          <a href="404.html"> <img src="images\icons\twitter.svg" alt="Twitter"> </a>
+          <a href="404.html"> <img src="images\icons\Youtube.svg" alt="Youtube"> </a>
+          <a href="404.html"> <img src="images\icons\Instagram.svg" alt="Instagram"> </a>
+          <a href="404.html"> <img src="images\icons\Vk.svg" alt="Вконтакте"> </a>
+        </div>
+        <div class="list">
+          <h4>Контакты</h4>
+          <ul>
+            <li> <a href="tel:+77479360683">8-747-936-06-83</a> </li>
+            <li> <a href="mailto:APO3010@ku.edu.kz">APO3010@ku.edu.kz</a> </li>
+          </ul>
+          <br>
+        </div>
+      </div>
+      <div class="copy">
+        &copy; 2025 Nova | Все права защищены. 
+      </div>
+    </div>
+  </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
