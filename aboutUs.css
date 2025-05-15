@@ -9,20 +9,16 @@
     --color-box-shadow: rgba(219, 210, 255, 0.432);     /* Глубокая синеватая тень */
     --border-radius: 10px;                         /* Скругление элементов */
   }
-  /*
-  :root {
+  .dark-theme {
   --color-body-bg: #f3f6fa;                       
   --color-content-bg: #ffffff;                     
   --color-text: #1f2a38;                          
   --color-heading: #3a4c66;                       
-  --color-caption-bg: rgba(90, 110, 130, 0.1);     
+  --color-caption-bg: rgba(188, 193, 199, 0.1);     
   --color-caption-text: #1f2a38;                  
   --color-caption-shadow: rgba(100, 120, 140, 0.1);
-  --color-box-shadow: rgba(80, 100, 120, 0.2);     
-  --border-radius: 10px;                           
+  --color-box-shadow: rgba(80, 100, 120, 0.2);                              
 }
-
-  */
   
   body {
     font-family: Arial, sans-serif;
@@ -33,6 +29,7 @@
   }
   
   .aboutUs_box {
+    padding-top: 60px;
     width: 100%;
     display: flex;
     justify-content: center;
