@@ -124,7 +124,7 @@
     object-fit: cover;
   }
   .aboutUs_box .charts{
-    width: 70%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
