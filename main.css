@@ -370,6 +370,7 @@ body {
   .mainNews .rec{
     background: none;
     width: 100%;
+    min-width: 0px;
     
     
   }

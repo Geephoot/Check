@@ -4,7 +4,7 @@ body {
       padding: 0;
 }
 .footer {
-  font-size: 10px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@ body {
   white-space: nowrap;
 }
 .footer img {
-  width: 30px;
+  width: 20px;
 }
 .footer .list{
   text-align: center;
@@ -42,4 +42,8 @@ body {
   margin-top: 20px;
   color: #aaa;
 }
-
+@media screen and (max-width:600px) {
+  .footer {
+  font-size: 10px;
+  }
+}

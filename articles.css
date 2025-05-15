@@ -1,21 +1,22 @@
+/*Светлая тема*/
 :root {
-    --color-bg: #1c2431;                      /* Тёмный сине-серый фон */
-    --color-bg-light: #2e3b4f;               /* Более светлый фон блоков */
-    --color-table-bg: #2e3b4f;               /* Фон таблицы */
-    --color-header-bg: #3a4c66;              /* Тускло-синий фон заголовков */
-    --color-header-text: #e0e6ed;            /* Светлый текст */
-    --color-border: #4d5c70;                 /* Серо-синяя граница */
-    --color-link: #8fa7c5;                   /* Светлый стальной синий (ссылки) */
-    --color-button-bg: #3a4c66;              /* Тускло-синяя кнопка */
-    --color-button-hover: #4d6a8c;           /* Ховер — чуть светлее */
-    --color-button-text: #ffffff;            /* Белый текст кнопки */
-    --box-shadow-light: 0px 0px 8px rgba(30, 50, 70, 0.4); /* Глубокая синяя тень */
-    --color-text: #e0e6ed;                   /* Светло-серый основной текст */
-    --color-input-bg: #2e3b4f;               /* Фон инпута */
-    --color-input-text: #e0e6ed;             /* Текст инпута */
-    --color-input-placeholder: #9aa7b8;      /* Плейсхолдер — серо-синий */
+    --color-bg: #1c2431;                     
+    --color-bg-light: #2e3b4f;               
+    --color-table-bg: #2e3b4f;               
+    --color-header-bg: #3a4c66;            
+    --color-header-text: #e0e6ed;            
+    --color-border: #4d5c70;                 
+    --color-link: #8fa7c5;                   
+    --color-button-bg: #3a4c66;              
+    --color-button-hover: #4d6a8c;           
+    --color-button-text: #ffffff;            
+    --box-shadow-light: 0px 0px 8px rgba(30, 50, 70, 0.4); 
+    --color-text: #e0e6ed;                  
+    --color-input-bg: #2e3b4f;             
+    --color-input-text: #e0e6ed;             
+    --color-input-placeholder: #9aa7b8;      
 }
-
+/*Темная тема*/
 .dark-theme {
   --color-bg: #f3f6fa;                    
   --color-bg-light: #dedde6;               

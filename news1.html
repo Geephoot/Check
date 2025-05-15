@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA публикует карту воды на Луне</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="footer.css"> 
+  <link rel="stylesheet" href="newsPage.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu">
+      	<div class="logo">
+          <a href="index.html"><img height = "35" src="images/Logo.svg" alt="Site Log"></a>
+          <div class="theme-switch">
+             <label class="switch">
+               <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+          </div>
+          
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            
+          </label>
+      		
+          <div class="items">
+            <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
+            <a href="articles.html">Статьи</a>
+          </div>
+
+          <div class = "search-auth">
+              <form id="search" action="index.html" method="post">
+                  <input type="text" name="search" value="" placeholder="Название новости">
+                  <button type="submit" name="searchSubmit"> Поиск </button>
+              </form>
+
+              <a href="signIn.html">Регистрация</a>
+          </div>
+      	</div>    
+    </header>
+  <main>
+    <div class="newsPage">
+      <h1>NASA публикует карту воды на Луне</h1>
+      <p><em>20 марта 2025</em></p>
+
+      <img src="images/news1.jpg" alt="Карта воды на Луне">
+
+      <p>NASA опубликовало подробную карту распределения водяного льда на поверхности Луны. Данные были получены в ходе миссии Artemis с помощью спектрометров, установленных на лунном орбитальном аппарате.</p>
+
+      <p>Эти данные помогут будущим миссиям эффективнее планировать добычу ресурсов и выбор места посадки. Также они имеют большое значение для научных исследований по изучению истории воды в Солнечной системе.</p>
+
+      <a href="index.html" class="back-link">← Назад </a>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
