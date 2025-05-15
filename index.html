@@ -46,33 +46,7 @@
               <a href="signIn.html">Регистрация</a>
           </div>
       	</div>
-        <script>
-  const toggleButton = document.getElementById('theme-toggle');
-  const body = document.body;
-
-  // Загрузка сохранённой темы
-  if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-theme');
-  }
-
-  toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-
-    // Сохраняем выбор
-    if (body.classList.contains('dark-theme')) {
-      localStorage.setItem('theme', 'dark');
-      toggleButton.textContent = '☀️';
-    } else {
-      localStorage.setItem('theme', 'light');
-      toggleButton.textContent = '🌙';
-    }
-  });
-
-  // Установка иконки при загрузке
-  if (body.classList.contains('dark-theme')) {
-    toggleButton.textContent = '☀️';
-  }
-</script>      
+            
     </header>
     <main>
       
@@ -217,9 +191,9 @@
         <div class="list">
           <h4>Социальные сети</h4>
           <a href="404.html"> <img src="images\icons\twitter.svg" alt="Twitter"> </a>
-          <a href="404.html"> <img src="images\icons\Youtube.svg" alt="Youtube"> </a>
-          <a href="404.html"> <img src="images\icons\Instagram.svg" alt="Instagram"> </a>
-          <a href="404.html"> <img src="images\icons\Vk.svg" alt="Вконтакте"> </a>
+          <a href="404.html"> <img src="images\icons\youtube.svg" alt="Youtube"> </a>
+          <a href="404.html"> <img src="images\icons\instagram.svg" alt="Instagram"> </a>
+          <a href="404.html"> <img src="images\icons\vk.svg" alt="Вконтакте"> </a>
         </div>
         <div class="list">
           <h4>Контакты</h4>
@@ -235,6 +209,6 @@
       </div>
     </div>
   </footer>
-    <script src="main.js"></script>
+  <script src="main.js"></script>
   </body>
 </html>

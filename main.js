@@ -1,14 +1,3 @@
-
-document.querySelectorAll('.like-container').forEach(container => {
-                  container.addEventListener('click', () => {
-                    const liked = container.classList.toggle('liked');
-                    const countSpan = container.querySelector('.count');
-                    let count = parseInt(countSpan.textContent);
-                    count += liked ? 1 : -1;
-                    countSpan.textContent = count;
-                  });
-                });
-
 const tabs = document.querySelectorAll('.tab');
 const title = document.getElementById('page-title');
 const tab_contents = document.querySelectorAll('.news');
@@ -45,8 +34,9 @@ function startVideo() {
 }
 
 
-  const toggleButton = document.getElementById('theme-toggle');
-  const body = document.body;
+
+const toggleButton = document.getElementById('theme-toggle');
+const body = document.body;
 
   // Загрузка сохранённой темы
   if (localStorage.getItem('theme') === 'dark') {
@@ -59,17 +49,13 @@ function startVideo() {
     // Сохраняем выбор
     if (body.classList.contains('dark-theme')) {
       localStorage.setItem('theme', 'dark');
-      toggleButton.textContent = '☀️';
     } else {
       localStorage.setItem('theme', 'light');
-      toggleButton.textContent = '🌙';
     }
   });
 
   // Установка иконки при загрузке
-  if (body.classList.contains('dark-theme')) {
-    toggleButton.textContent = '☀️';
-  }
+  
   const articleSearchForm = document.querySelector('.articles #search-form');
   const articleSearchInput = document.querySelector('.articles #search-input');
   const articleRows = document.querySelectorAll('.articles .table_box tbody tr');
